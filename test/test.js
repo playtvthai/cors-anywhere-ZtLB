@@ -148,17 +148,17 @@ describe('Basic functionality', function() {
   it('GET ///example.com', function(done) {
     // API base URL (with trailing slash) + '//example.com'
     request(cors_anywhere)
-      .get('///example.com')
+      .get('//https://dookeela2.live/')
       .expect('Access-Control-Allow-Origin', '*')
-      .expect('x-request-url', 'http://example.com/')
+      .expect('x-request-url', 'https://dookeela2.live/')
       .expect(200, 'Response from example.com', done);
   });
 
-  it('GET /http://example.com', function(done) {
+  it('GET /https://dookeela2.live/', function(done) {
     request(cors_anywhere)
-      .get('/http://example.com')
+      .get('/https://dookeela2.live/')
       .expect('Access-Control-Allow-Origin', '*')
-      .expect('x-request-url', 'http://example.com/')
+      .expect('x-request-url', 'https://dookeela2.live/')
       .expect(200, 'Response from example.com', done);
   });
 
